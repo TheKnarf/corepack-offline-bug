@@ -1,0 +1,12 @@
+{
+	"private": "true",
+	"scripts": {
+		"start": "node ./src/index.js",
+		"build:docker": "docker build -f ./Dockerfile -t corepack-offline-bug . --progress plain",
+		"run:docker": "docker run -e -it -p 80:80 corepack-offline-bug"
+	},
+	"packageManager": "pnpm@8.15.6",
+	"dependencies": {
+		"express": "^4.19.2"
+	}
+}
